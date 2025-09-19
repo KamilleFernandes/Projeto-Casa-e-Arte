@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa & Arte</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:rgb(7, 122, 88);
+            padding: 0px 10px;
+            height: 65px;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            justify-content: space-between;
+            color: white;
+        }
+        .logo img{
+            height: 80px;
+        }
+        .logo h1{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .menu{
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .menu a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin-left: 20px; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .fundo {
+            position: relative;
+            height: 250px;
+            background-image: url('imagemfundo.jpg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .fundo h1 {
+            font-size: 60px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
+            margin: 0;
+        }
+
+        .texto {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            background-color: #c1cac6;
+            text-align: center;
+        }
+
+        .texto img {
+            height: 140px;
+            margin-bottom: 20px;
+        }
+
+        .texto p {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 800px;
+            line-height: 1.6;
+            font-size: 20px;
+        }
+        
+</style>
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">
+      <img src="C:\Users\NB\Desktop\GIT\ProjetoCasa_e_Arte\src\static\imagens" alt="Logo">
+      <h1>Casa & Arte</h1>
+    </div>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre nós</a>1
+      <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<section class="fundo">
+    <h1>Casa & Arte</h1>
+</section>
+
+<section class="texto">
+    <img src="C:\Users\NB\Desktop\GIT\ProjetoCasa_e_Arte\src\static\imagens" alt="Logo">
+    <p>
+      Bem-vindo à Casa & Arte! Transformamos sua casa em um lar cheio de estilo, conforto e personalidade.
+      Oferecemos projetos de decoração, e diversos adereços e soluções para todos os ambientes da sua casa.
+      Temos decorações de diversos estilos, moderno, minimalista, vintage, geek, entre outros.
+      Deixe seu lar do seu jeitinho!
+    </p>
+</section>
+</body>
+</html>
