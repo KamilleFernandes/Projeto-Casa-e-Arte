@@ -1,55 +1,187 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa & Arte</title>
-    <style>
-        body{
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós – Casa & Arte</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        }
-        .navbar{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color:rgb(7, 122, 88);
-            padding: 0px 10px;
-            height: 65px;
-        }
-        .logo{
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            justify-content: space-between;
-            color: white;
-        }
-        .logo img{
-            height: 80px;
-        }
-        .logo h1{
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .menu{
-            margin: 0;
-            display: flex;
-            justify-content: space-evenly;
-        }
-        .menu a{
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            margin-left: 20px; 
-            font-family: Arial, Helvetica, sans-serif;
-        }
-</style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(7, 122, 88);
+      padding: 0.5rem 1rem;
+      height: 65px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .menu {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    /* Banner */
+   .fundo {
+  height: 250px;
+  background-image: linear-gradient(rgb(7, 122, 88, 0.5)), url("imagens/imagem_sobre.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+    .fundo h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    }
+
+    /* Conteúdo */
+    .texto {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .texto img {
+      height: 120px;
+      margin-bottom: 1.5rem;
+      border-radius: 80px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+
+    .texto p {
+      max-width: 800px;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 767px) {
+      .logo img {
+        height: 45px;
+      }
+
+      .logo h1 {
+        font-size: 1rem;
+      }
+
+      .menu a {
+        font-size: 0.9rem;
+      }
+
+      .fundo h1 {
+        font-size: 2rem;
+      }
+
+      .texto p {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .navbar {
+        padding: 0.3rem 0.5rem;
+      }
+
+      .logo img {
+        height: 40px;
+      }
+
+      .menu {
+        gap: 0.5rem;
+      }
+
+      .menu a {
+        font-size: 0.8rem;
+      }
+
+      .texto img {
+        height: 90px;
+      }
+
+      .texto p {
+        font-size: 0.9rem;
+      }
+    }
+
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  color: #006d3a; /* verde da sua identidade */
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  color: #333;
+  line-height: 1.6;
+}
+  </style>
 </head>
 <body>
-    <header class="navbar">
+  <!-- Navbar -->
+  <header class="navbar">
     <div class="logo">
       <img src="imagens/logo1.png" alt="Logo">
       <h1>Casa & Arte</h1>
@@ -59,15 +191,43 @@
       <a href="sobre.html">Sobre nós</a>
       <a href="contato.html">Contato</a>
     </nav>
-</header>
-<section class="texto">
+  </header>
+
+  <!-- Banner -->
+  <section class="fundo">
+    <h1>Sobre Nós</h1>
+  </section>
+
+  <!-- Conteúdo -->
+  <section class="texto">
     <img src="imagens/logo1.png" alt="Logo">
     <p>
-      Bem-vindo à Casa & Arte! Transformamos sua casa em um lar cheio de estilo, conforto e personalidade.
-      Oferecemos projetos de decoração, e diversos adereços e soluções para todos os ambientes da sua casa.
-      Temos decorações de diversos estilos, moderno, minimalista, vintage, geek, entre outros.
-      Deixe seu lar do seu jeitinho!
+      A <strong>Casa & Arte</strong> nasceu com o propósito de transformar lares em espaços únicos e acolhedores. 
+      Acreditamos que cada ambiente conta uma história e oferecemos soluções criativas de decoração 
+      que unem estilo, conforto e personalidade.
     </p>
+    <p>
+      Nossa equipe é apaixonada por design e trabalha para trazer opções que atendam a diversos estilos – 
+      do moderno ao clássico, do minimalista ao vibrante. 
+      Mais do que decorar, queremos ajudar você a criar memórias em um lugar que seja realmente seu.
+    </p>
+  </section>
+
+  <section class="cards-section">
+  <div class="card">
+    <h3>Nossa Missão</h3>
+    <p>Transformar espaços em lares acolhedores, funcionais e cheios de personalidade, proporcionando bem-estar e felicidade para toda a família.</p>
+  </div>
+
+  <div class="card">
+    <h3>Nossa Visão</h3>
+    <p>Ser referência em decoração e design de interiores, reconhecida pela qualidade, criatividade e atenção aos detalhes em cada projeto realizado.</p>
+  </div>
+
+  <div class="card">
+    <h3>Nossos Valores</h3>
+    <p>Qualidade, criatividade, sustentabilidade e atendimento personalizado. Cada cliente é único e merece um projeto exclusivo.</p>
+  </div>
 </section>
 
 </body>

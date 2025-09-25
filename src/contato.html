@@ -3,72 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa & Arte</title>
+    <title>Contato - Casa & Arte</title>
     <style>
-        body{
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-
         }
-        .navbar{
+
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color:rgb(7, 122, 88);
-            padding: 0px 10px;
+            background-color: rgb(7, 122, 88);
+            padding: 0.5rem 1rem;
             height: 65px;
         }
-        .logo{
+
+        .logo {
             display: flex;
             align-items: center;
-            padding: 10px;
-            justify-content: space-between;
             color: white;
         }
-        .logo img{
-            height: 80px;
+
+        .logo img {
+            height: 60px;
+            margin-right: 10px;
         }
-        .logo h1{
+
+        .logo h1 {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
         }
-        .menu{
-            margin: 0;
+
+        .menu {
             display: flex;
-            justify-content: space-evenly;
+            gap: 1rem;
         }
-        .menu a{
+
+        .menu a {
             color: white;
             text-decoration: none;
-            font-size: 20px;
-            margin-left: 20px; 
-            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
         }
-</style>
+
+        /* Banner */
+        .fundo {
+            height: 250px;
+            background-image: linear-gradient(rgba(7, 122, 88, 0.5), rgba(7, 122, 88, 0.5)), url("imagens/imagemfundo.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .fundo h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        /* Seção do formulário */
+        .texto {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px 20px;
+            background-color: #ffffff;
+        }
+
+        .form-card {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-card h2 {
+            color: rgb(7, 122, 88);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-card label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: rgb(7, 122, 88);
+        }
+
+        .form-card input,
+        .form-card textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .form-card textarea {
+            resize: vertical;
+        }
+
+        .form-card button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: rgb(7, 122, 88);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-card button:hover {
+            background-color: rgb(5, 90, 65);
+        }
+
+        @media(max-width: 600px){
+            .form-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="navbar">
-    <div class="logo">
-      <img src="imagens/logo1.png" alt="Logo">
-      <h1>Casa & Arte</h1>
-    </div>
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="sobre.html">Sobre nós</a>
-      <a href="contato.html">Contato</a>
-    </nav>
-</header>
-<section class="texto">
-    <img src="imagens/logo1.png" alt="Logo">
-    <p>
-      Bem-vindo à Casa & Arte! Transformamos sua casa em um lar cheio de estilo, conforto e personalidade.
-      Oferecemos projetos de decoração, e diversos adereços e soluções para todos os ambientes da sua casa.
-      Temos decorações de diversos estilos, moderno, minimalista, vintage, geek, entre outros.
-      Deixe seu lar do seu jeitinho!
-    </p>
-</section>
+        <div class="logo">
+            <img src="imagens/logo1.png" alt="Logo">
+            <h1>Casa & Arte</h1>
+        </div>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
 
+    <section class="fundo">
+        <h1>Contato</h1>
+    </section>
+
+    <section class="texto">
+        <div class="form-card">
+            <h2>Envie uma Mensagem</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" name="telefone" placeholder="Seu telefone">
+
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" placeholder="Assunto" required>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
